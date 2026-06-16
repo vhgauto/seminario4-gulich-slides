@@ -1,0 +1,315 @@
+---
+title: Applications for data science with <quarto-portada>shiny</quarto-portada>
+subtitle: <em>With <quarto-portada>remote sensing</quarto-portada> examples</em>
+title-slide-attributes:
+  data-background-color: "#224289"
+author:
+  - name: <vhg>Víctor Gauto, **MS** [{{< iconify fa6-brands:orcid >}}](https://orcid.org/0000-0001-9960-8558)</vhg>
+    affiliation:
+      - name: <rosa><b>GISTAQ</b> (UTN-FRRe)</rosa>
+        url: https://www.instagram.com/gistaq.utn/
+      - name: <rosa><b>IIDTHH</b> (UNNE, CONICET)</rosa>
+        url: https://iidthh.conicet.gov.ar/
+      - name: <rosa><b>Instituto Gulich</b> (UNC, CONAE)<rosa>
+        url: https://ig.conae.unc.edu.ar/
+    email: victor.gauto@ca.free.utn.edu.ar
+    corresponding: true
+  - name: Matías<br>Bonansea, **PhD** [{{< iconify fa6-brands:orcid >}}](https://orcid.org/0000-0003-1953-2595)
+    affiliation:
+      - name: <b>ICBIA</b> (UNRC, CONICET)
+        url: https://icbia.conicet.gov.ar/
+  - name: Anabella<br>Ferral, **PhD** [{{< iconify fa6-brands:orcid >}}](https://orcid.org/0000-0002-9383-7728)
+    affiliation:
+      - name: <b>Instituto Gulich</b> (UNC, CONAE)
+        url: https://ig.conae.unc.edu.ar/
+  - name: Osvaldo<br>Cardozo, **PhD** [{{< iconify fa6-brands:orcid >}}](https://orcid.org/0000-0002-0345-4505)
+    affiliation:
+      - name: <b>IIDTHH</b> (UNNE, CONICET)
+        url: https://iidthh.conicet.gov.ar/
+  - name: Claudia<br>Giardino, **PhD** [{{< iconify fa6-brands:orcid >}}](https://orcid.org/0000-0002-3937-4988)
+    affiliation:
+      - name: <b>IREA</b> (CNR)
+        url: http://www.irea.cnr.it/
+format:
+  revealjs:
+    fig-width: 7
+    fig-height: 7
+    fig-dpi: 300
+    code-link: true
+    code-line-numbers: false
+    code-copy: true
+    code-fold: true
+    code-overflow: wrap
+    code-summary: Show code
+    embed-resources: true
+    number-sections: true
+    auto-play-media: true
+    highlight-style: kate
+    width: 1200
+    incremental: false
+    reference-location: document
+    transition: none
+    logo: https://ig.conae.unc.edu.ar/wp-content/uploads/sites/68/2022/04/G-CLARO-C.png
+    footer: |
+      <rosa>**Víctor Gauto {{< iconify svg-spinners:pulse >}} Better maps with R**</rosa>
+    slide-number: true
+    progress: true
+    hash-type: title
+    date: 2026-04-01
+    center-title-slide: false
+    navigation-mode: linear
+    link-external-icon: false
+    link-external-newwindow: true
+    output-location: column
+    theme:
+      - extras/mi_estilo.scss
+    include-in-header:
+      - text: |
+          <link rel='shortcut icon' href='img/favicon.jpg'/>
+    # pointer:
+    #   pointerSize: 15
+    #   color: "#E81F76"
+    #   alwaysVisible: false
+    #   key: "q"
+execute:
+  echo: true
+  eval: false
+  warning: false
+lightbox: true
+editor_options:
+  chunk_output_type: console
+filters: 
+  - roughnotation
+# revealjs-plugins:
+# - pointer
+---
+
+# Outline {.center .unnumbered}
+
+:::: {.columns}
+
+::: {.column  width="40%"}
+
+- Introduction [$\S$ @sec-introduction]
+- Motivation [$\S$ @sec-motivation]
+- Static maps [$\S$ @sec-static]
+
+:::
+
+::: {.column  width="60%"}
+
+<center>Slides available online</center>
+
+::: {.r-fit-text}
+
+```{.r}
+https://vhgauto.github.io/seminario3-gulich/
+```
+
+![](img/qr_seminario.png){width="70%" fig-align="center"}
+
+:::
+
+:::
+
+::::
+
+# Introduction {#sec-introduction .center}
+
+A good map is an [appealing]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 rn-index=1} and [useful]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 rn-index=1} plot, that combines <u>design</u>, <u>geography</u> and <u>GIS</u>.
+
+![](img/Minard.png){width=700px fig-align="center"}
+
+# Motivation {#sec-motivation .center}
+
+A typical workflow.
+
+![](fig/wf.png){fig-align="center"}
+
+## Why coding? {.center}
+
+- [Alternative]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to GUI.
+
+- Creating maps with coding makes [reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} more accessible.
+
+- Easy to get [support]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and test solutions.
+
+- Facilitate [update]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} maps with new data.
+
+- Change styles by [variable]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} definitions.
+
+- Already [confortable]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} with coding, but extended to maps.
+
+# Static maps {#sec-static .center}
+
+Maps as figures (`.png`, `.tif`, `.jpg`, `.pdf`, `.svg`) to use in publications, posters, social media and news.
+
+:::: {layout-ncol="2"}
+
+::: {.callout-note icon=false}
+
+## Data
+
+Elevation[^1] from <b>Las Heras</b> department in Mendoza province to demostrate different packages and results.
+
+Las Heras city and Aconcagua mountain locations.
+
+:::
+
+::::
+
+<br>
+<br>
+
+[^1]: NOAA National Centers for Environmental Information. (2022). ETOPO 2022 15 arc-second global relief model. NOAA National Centers for Environmental Information. <http://doi.org/10.25921/fd45-gt74>
+
+
+## [terra](https://rspatial.github.io/terra/)
+
+::: {layout-ncol="2"}
+![](fig/terra-1.png){height=650px}
+
+Basic map made with `{terra}`, for a quick visualization.
+:::
+
+# Conclusion {#sec-conclusion .center}
+
+- Coding can be [scary]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} [challenging]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} sometimes, but the results are remarkable.
+
+- The different maps formats that can be created (static, animated, interactive, 3D) [worth a try]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
+
+- [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is important in data analysis but is equaly important in maps plotting.
+
+- This seminar it's a glimpse of mapping with code using <rosa>R</rosa>, and a [starting point]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to start using the scripts available.
+
+# Resources {#sec-resources .smaller}
+
+:::: {.columns}
+
+::: {.column}
+
+[{{< iconify ion:book-sharp >}} ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/maps.html)
+
+[{{< iconify ion:book-sharp >}} Making Maps with R](https://bookdown.org/nicohahn/making_maps_with_r5/docs/introduction.html)
+
+[{{< iconify ion:book-sharp >}} R as GIS for Economists](https://tmieno2.github.io/R-as-GIS-for-Economists-Quarto/chapters/08-CreateMaps-ggplot.html)
+
+[{{< iconify ion:book-sharp >}} ggiraph-book](https://www.ardata.fr/ggiraph-book/)
+
+---
+
+[{{< iconify mdi:youtube >}} Mapping wildfires data in R with mapsf](https://www.youtube.com/watch?v=_BN7xOtbVAc)
+
+[{{< iconify mdi:youtube >}} Making maps in R using TMAP](https://www.youtube.com/watch?v=QcR9s3wF5lY)
+
+[{{< iconify mdi:youtube >}} How to FULLY Customize Leaflet Maps using R programming](https://www.youtube.com/watch?v=U0aJeaCnMeE)
+
+[{{< iconify mdi:youtube >}} 3D digital elevation maps with elevatr, rayshader and rayvista in R](https://www.youtube.com/watch?v=kGadI6_ZIR4)
+
+::: {.callout style='font-size: 2em;'}
+Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="color:#74aadb;" >}}
+
+[Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario3-gulich)
+:::
+
+:::
+
+::: {.column}
+
+[{{< iconify ph:package-fill >}} mapgl, R interface to Mapbox GL JS v3 and Maplibre GL JS](https://walker-data.com/mapgl/)
+
+[{{< iconify ph:package-fill >}} elevatr, An R package for accessing elevation data](https://github.com/USEPA/elevatr)
+
+[{{< iconify ph:package-fill >}} marmap, Import, Plot and Analyze Bathymetric and Topographic Data](https://github.com/ericpante/marmap)
+
+[{{< iconify ph:package-fill >}} maptiles, Download, compose and display map tiles with R](https://github.com/riatelab/maptiles)
+
+[{{< iconify ph:package-fill >}} geodata, download geographic data](https://rspatial.github.io/geodata/)
+
+[{{< iconify ph:package-fill >}} rayvista, An R plugin for {rayshader} to view a 3D vista anywhere on earth](https://github.com/h-a-graham/rayvista)
+
+---
+
+[{{< iconify fluent-emoji-high-contrast:link >}} MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Mapbox GL JS](https://www.mapbox.com/)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} State of the (open source) web map](https://tim-salabim.codeberg.page/sotwm/sotwm.html)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Tutorial: Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/posts/data_visualization/adding-open-street-map-data-to-rayshader-maps-in-r.html)
+
+:::
+
+::::
+
+# {.unnumbered background-color="#f79cd4"}
+
+::: {style="text-align: center;"}
+
+<gracias>Thanks for your time</gracias>
+
+:::
+
+<br>
+
+:::: {.columns layout-ncol=2}
+
+::: {.column style="text-align: center; font-size: 1em;"}
+
+**MS Víctor Gauto**<br>[`victor.gauto@ca.frre.utn.edu.ar`](mailto:victor.gauto@ca.frre.utn.edu.ar)
+
+:::
+
+::: {.column layout-nrow=1 style="text-align: center; font-size: 1.2em;"}
+
+[<blanco>{{< iconify ic:baseline-home >}}</blanco>](https://vhgauto.github.io/)
+
+[<blanco>{{< iconify mdi:twitter >}}</blanco>](https://twitter.com/vhgauto)
+
+[<blanco>{{< iconify mdi:instagram >}}</blanco>](https://www.instagram.com/vhgauto/)
+
+[<blanco>{{< iconify mdi:github >}}</blanco>](https://github.com/vhgauto)
+
+[<blanco>{{< iconify ri:bluesky-fill >}}</blanco>](https://bsky.app/profile/vhgauto.bsky.social)
+
+[<blanco>{{< iconify mdi:mastodon >}}</blanco>](https://fosstodon.org/@vhgauto)
+
+`@vhgauto`
+
+:::
+
+::::
+
+::: {layout-nrow=1 layout-valign="center"}
+
+<center>
+
+![](img/Gistaq_sinfondo.png){width=165}
+
+![](img/logo_ig3.png){width=165}
+
+![](img/iidthh.png){width=165}
+
+![](img/Conicet_Logo_con_letras.png){width=165}
+
+</center>
+
+:::
+
+::: {layout-nrow=1 layout-valign="center"}
+
+<center>
+
+![](img/logo_utn6.png){width=165}
+
+![](img/unne.png){width=165}
+
+![](img/UNC_03_NEGRO.svg){width=165}
+
+![](img/CONAE.png){width=165}
+
+</center>
+
+:::
+
+<center><span style='font-size: 7pt;'>*No generative AI was used to make this presentation*</span></center>
