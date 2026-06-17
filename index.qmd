@@ -1,6 +1,6 @@
 ---
-title: Applications for data science with <quarto-portada>shiny</quarto-portada>
-subtitle: <em>With <quarto-portada>remote sensing</quarto-portada> examples</em>
+title: Better science communication with<br><quarto-portada>shiny</quarto-portada> apps
+subtitle: <em>With <rosa>remote sensing</rosa> examples</em> | <gris>2026-04-01</gris>
 title-slide-attributes:
   data-background-color: "#224289"
 author:
@@ -51,11 +51,11 @@ format:
     transition: none
     logo: https://ig.conae.unc.edu.ar/wp-content/uploads/sites/68/2022/04/G-CLARO-C.png
     footer: |
-      <rosa>**Víctor Gauto {{< iconify svg-spinners:pulse >}} Better maps with R**</rosa>
+      <rosa>**Víctor Gauto** <span class="line-md--cog-filled-loop"></span> Better science communication with <blanco>shiny</blanco> apps
     slide-number: true
     progress: true
     hash-type: title
-    date: 2026-04-01
+    # date: 2026-04-01
     center-title-slide: false
     navigation-mode: linear
     link-external-icon: false
@@ -66,11 +66,6 @@ format:
     include-in-header:
       - text: |
           <link rel='shortcut icon' href='img/favicon.jpg'/>
-    # pointer:
-    #   pointerSize: 15
-    #   color: "#E81F76"
-    #   alwaysVisible: false
-    #   key: "q"
 execute:
   echo: true
   eval: false
@@ -80,8 +75,6 @@ editor_options:
   chunk_output_type: console
 filters: 
   - roughnotation
-# revealjs-plugins:
-# - pointer
 ---
 
 # Outline {.center .unnumbered}
@@ -92,7 +85,6 @@ filters:
 
 - Introduction [$\S$ @sec-introduction]
 - Motivation [$\S$ @sec-motivation]
-- Static maps [$\S$ @sec-static]
 
 :::
 
@@ -103,10 +95,10 @@ filters:
 ::: {.r-fit-text}
 
 ```{.r}
-https://vhgauto.github.io/seminario3-gulich/
+https://vhgauto.github.io/seminario4-gulich-slides/
 ```
 
-![](img/qr_seminario.png){width="70%" fig-align="center"}
+![](img/qr_seminario.svg){width="70%" fig-align="center"}
 
 :::
 
@@ -116,71 +108,98 @@ https://vhgauto.github.io/seminario3-gulich/
 
 # Introduction {#sec-introduction .center}
 
-A good map is an [appealing]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 rn-index=1} and [useful]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 rn-index=1} plot, that combines <u>design</u>, <u>geography</u> and <u>GIS</u>.
+- Apps are everywhere, but not always associated with [data science]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=1} communication.
+- Using apps, the user is compelled to [explore]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} and [play]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} with the available options, changing the outputs at will.
+- A good app can trigger [curiosity]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=3} and allows our audience to ask new questions.
 
-![](img/Minard.png){width=700px fig-align="center"}
+<center>
+
+{{< iconify fluent:apps-48-filled size=5x style="color:#F79CD4;" >}}
+
+</center>
 
 # Motivation {#sec-motivation .center}
 
-A typical workflow.
+Once a **Research Project** is finished, we proceed to [communicate]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} the primary results.
 
-![](fig/wf.png){fig-align="center"}
+- <u>Academic environment</u>: papers, congress, posters, conferences.
+- Web site, social network, news outlet.
 
-## Why coding? {.center}
+But, what are our tools to [engage]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} with the audience?
 
-- [Alternative]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to GUI.
+- Short, impactful titles.
+- Good visualizations.
+- A proper narrative to explain complex ideas.
 
-- Creating maps with coding makes [reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} more accessible.
+An alternative, we can change the audience approach: from a [passive]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} perspective, to an [active]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and more engaging perspective.
 
-- Easy to get [support]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and test solutions.
+# Reactive programming
 
-- Facilitate [update]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} maps with new data.
+<!-- {.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} -->
 
-- Change styles by [variable]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} definitions.
+To click/tap a button and the result to appear as we ask for it is an interesting way to communicate [science]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
 
-- Already [confortable]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} with coding, but extended to maps.
+Since we work with data, we are used to code in a [direct way]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, when the functions are evaluated immediately and an output is generated at the spot.
 
-# Static maps {#sec-static .center}
+But, in a **reactive environment**, we have to think in a [potential user]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and the many request that we can do, from the offer that we provide.
 
-Maps as figures (`.png`, `.tif`, `.jpg`, `.pdf`, `.svg`) to use in publications, posters, social media and news.
+The app is divided in two main parts: the [user interface]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, in the audience side, with the possibility to request calculations and the ability to configure settings. And the processing side, the [server]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, where all the processes are executed accordingly.
 
-:::: {layout-ncol="2"}
+## Challenges
 
-::: {.callout-note icon=false}
+Since the app is made of an user interface and a server:
 
-## Data
+- We must think in all the [potential stages]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} of variables and how the functions are associated within each other. 
 
-Elevation[^1] from <b>Las Heras</b> department in Mendoza province to demostrate different packages and results.
+- The [execution time]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is a major aspect in the whole app, to offer a seamless user experience.
 
-Las Heras city and Aconcagua mountain locations.
+- [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is a main concern, to ensure good results.
 
-:::
+# Why <quarto-portada>shiny</quarto-portada>? {.center}
 
-::::
+- <quarto-portada>shiny</quarto-portada> is a tool for app development, with [`r`]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and [`python`]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} integration.
+- Since a lot of work is done by [coding processing]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=2}, <quarto-portada>shiny</quarto-portada> offers a known framework.
+- With [minimal configuration]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, a proper app is achieved.
+- Multiple [publishing alternatives]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=4} are available, some of them for free.
+- <quarto-portada>shiny</quarto-portada> allows to style the app as we like, since we can include web develompent tools.
+- [Resources]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=5} available online and package documentation with books and plenty of examples.
 
-<br>
-<br>
+# When to develop a <quarto-portada>shiny</quarto-portada> app? {#sec-static .center}
 
-[^1]: NOAA National Centers for Environmental Information. (2022). ETOPO 2022 15 arc-second global relief model. NOAA National Centers for Environmental Information. <http://doi.org/10.25921/fd45-gt74>
+Common contexts were one can rely on <quarto-portada>shiny</quarto-portada> to develop an app.
 
+## Data exploration
 
-## [terra](https://rspatial.github.io/terra/)
+A new dataset require data exploration, that usually initiate with statistical calculations, relationships between variables and plotting.
 
-::: {layout-ncol="2"}
-![](fig/terra-1.png){height=650px}
+In a traditional way, this involves a lot of iteration, to check lots of potentially uninteresting results and modify observations ranges.
 
-Basic map made with `{terra}`, for a quick visualization.
-:::
+## Science communication
+
+At the time to communicate our results, an app can engage our audience.
+
+It's important to include proper explanations that follow along the reactive aspects of the app. Even color palette selection, or the capability to export some results is a desired app feature.
+
+To select the variables to plot can improve the understanding of the insight found.
+
+Since a web app is still a web site, we can include links, videos, plots and other resources to increase the user engagement.
+
+## Remote sensing example
+
+> - Interactive maps can be displayed by selecting different algorithms/parameters or RGB.
+> - Spectral signature plots, for atmospheric correction comparisons.
+> - Date selection for map inspection.
+> - Color palette settings for a personal touch.
+> - Export results as a .pdf report.
+> - Display main parameter values, for an easy visualization, as a dashboard.
+> - Include documentation, links, resources and formatted bibliography.
 
 # Conclusion {#sec-conclusion .center}
 
-- Coding can be [scary]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} [challenging]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} sometimes, but the results are remarkable.
-
-- The different maps formats that can be created (static, animated, interactive, 3D) [worth a try]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
-
-- [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is important in data analysis but is equaly important in maps plotting.
-
-- This seminar it's a glimpse of mapping with code using <rosa>R</rosa>, and a [starting point]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to start using the scripts available.
+> - Coding can be [scary]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} [challenging]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} sometimes, but the results are remarkable.
+> - The different maps formats that can be created (static, animated, interactive, 3D) [worth a try]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
+> - [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is important in data analysis but is equaly important in maps plotting.
+> - This seminar it's a glimpse of mapping with code using <rosa>R</rosa>, and a [starting point]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to start using the scripts available.
 
 # Resources {#sec-resources .smaller}
 
