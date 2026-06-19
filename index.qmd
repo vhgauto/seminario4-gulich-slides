@@ -51,7 +51,7 @@ format:
     transition: none
     logo: https://ig.conae.unc.edu.ar/wp-content/uploads/sites/68/2022/04/G-CLARO-C.png
     footer: |
-      <rosa>**Víctor Gauto** <span class="line-md--cog-filled-loop"></span> Better science communication with <blanco>shiny</blanco> apps
+      <rosa>Mgtr. **Víctor Gauto** <span class="line-md--cog-filled-loop"></span> Better science communication with <blanco>shiny</blanco> apps
     slide-number: true
     progress: true
     hash-type: title
@@ -70,7 +70,7 @@ execute:
   echo: true
   eval: false
   warning: false
-lightbox: true
+lightbox: false
 editor_options:
   chunk_output_type: console
 filters: 
@@ -108,9 +108,9 @@ https://vhgauto.github.io/seminario4-gulich-slides/
 
 # Introduction {#sec-introduction .center}
 
-- Apps are everywhere, but not always associated with [data science]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=1} communication.
-- Using apps, the user is compelled to [explore]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} and [play]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} with the available options, changing the outputs at will.
-- A good app can trigger [curiosity]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=3} and allows our audience to ask new questions.
+- Apps are everywhere, but not always associated with [data science]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=1} communication.
+- Using apps, the user is compelled to [explore]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} and [play]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=2} with the available options, changing the outputs at will.
+- A good app can trigger [curiosity]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3 fragment-index=3} and allows our audience to ask new questions.
 
 <center>
 
@@ -120,49 +120,40 @@ https://vhgauto.github.io/seminario4-gulich-slides/
 
 # Motivation {#sec-motivation .center}
 
-Once a **Research Project** is finished, we proceed to [communicate]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} the primary results.
+Once a **Research Project** is finished, we proceed to [communicate]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} the primary results.
 
 - <u>Academic environment</u>: papers, congress, posters, conferences.
 - Web site, social network, news outlet.
 
-But, what are our tools to [engage]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} with the audience?
+But, what are our tools to [engage]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} with the audience?
 
 - Short, impactful titles.
 - Good visualizations.
 - A proper narrative to explain complex ideas.
 
-An alternative, we can change the audience approach: from a [passive]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} perspective, to an [active]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and more engaging perspective.
+An alternative, we can change the audience approach: from a [passive]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} perspective, to an [active]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} and more engaging perspective.
 
 # Reactive programming
 
-<!-- {.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} -->
+<!-- {.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} -->
 
-To click/tap a button and the result to appear as we ask for it is an interesting way to communicate [science]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
+To click/tap a button and the result to appear as we ask for it is an interesting way to communicate [science]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}.
 
-Since we work with data, we are used to code in a [direct way]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, when the functions are evaluated immediately and an output is generated at the spot.
+Since we work with data, we are used to code in a [direct way]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, when the functions are evaluated immediately and an output is generated at the spot.
 
-But, in a **reactive environment**, we have to think in a [potential user]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and the many request that we can do, from the offer that we provide.
+But, in a **reactive environment**, we have to think in a [potential user]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} and the many request that we can do, from the offer that we provide.
 
-The app is divided in two main parts: the [user interface]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, in the audience side, with the possibility to request calculations and the ability to configure settings. And the processing side, the [server]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, where all the processes are executed accordingly.
+The app is divided in two main parts: the [user interface]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, in the audience side, with the possibility to request calculations and the ability to configure settings. And the processing side, the [server]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, where all the processes are executed accordingly.
 
 ## Challenges
 
 Since the app is made of an user interface and a server:
 
-- We must think in all the [potential stages]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} of variables and how the functions are associated within each other. 
+- We must think in all the [potential stages]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} of variables and how the functions are associated within each other. 
 
-- The [execution time]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is a major aspect in the whole app, to offer a seamless user experience.
+- The [execution time]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} is a major aspect in the whole app, to offer a seamless user experience.
 
-- [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is a main concern, to ensure good results.
-
-# Why <quarto-portada>shiny</quarto-portada>? {.center}
-
-- <quarto-portada>shiny</quarto-portada> is a tool for app development, with [`r`]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} and [`python`]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} integration.
-- Since a lot of work is done by [coding processing]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=2}, <quarto-portada>shiny</quarto-portada> offers a known framework.
-- With [minimal configuration]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}, a proper app is achieved.
-- Multiple [publishing alternatives]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=4} are available, some of them for free.
-- <quarto-portada>shiny</quarto-portada> allows to style the app as we like, since we can include web develompent tools.
-- [Resources]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=5} available online and package documentation with books and plenty of examples.
+- [Reproducibility]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} is a main concern, to ensure good results.
 
 # When to develop a <quarto-portada>shiny</quarto-portada> app? {#sec-static .center}
 
@@ -170,36 +161,87 @@ Common contexts were one can rely on <quarto-portada>shiny</quarto-portada> to d
 
 ## Data exploration
 
-A new dataset require data exploration, that usually initiate with statistical calculations, relationships between variables and plotting.
+A new dataset require data exploration, that usually initiate with statistical calculations, relationships between variables, plotting and modelling.
 
-In a traditional way, this involves a lot of iteration, to check lots of potentially uninteresting results and modify observations ranges.
+In a traditional way, this involves a lot of [iteration]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, to check multiple potentially uninteresting results and modify observations ranges.
+
+To go back and forth requires a lot of typing and it's prone to errors.
+
+Custom functions can help to ease the recurrent task, but still from an development environment, with a lot of [coding background]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}.
+
+An app it's an alternative for data exploration that can help you find insight. 
+
+Apps can be [shared]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} allowing the data exploration to non coding profiles professionals.
 
 ## Science communication
 
-At the time to communicate our results, an app can engage our audience.
+At the time to communicate our results, an app can [engage]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} our audience.
 
-It's important to include proper explanations that follow along the reactive aspects of the app. Even color palette selection, or the capability to export some results is a desired app feature.
+It's important to include proper [explanations]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} that follows along the reactive aspects of the app. 
 
-To select the variables to plot can improve the understanding of the insight found.
+Even color palette selection, or the capability to export some results are desired app features.
 
-Since a web app is still a web site, we can include links, videos, plots and other resources to increase the user engagement.
+To select the variables to plot can improve the understanding of the results found.
+
+Since an app is still a web site, we can include links, videos, plots and other [resources]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} to complement what we want to communicate.
+
+::: {.callout-note appearance="simple" icon=false} 
+
+[Since an app allows the audience to change multiple variables, ranges, correlations, models, options, it's relevant to [not confuse]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, and that all reactive parts of the app are inline with the results we want to share.]{style='font-size: 1.3em;'}
+
+:::
 
 ## Remote sensing example
 
-> - Interactive maps can be displayed by selecting different algorithms/parameters or RGB.
-> - Spectral signature plots, for atmospheric correction comparisons.
-> - Date selection for map inspection.
-> - Color palette settings for a personal touch.
-> - Export results as a .pdf report.
-> - Display main parameter values, for an easy visualization, as a dashboard.
-> - Include documentation, links, resources and formatted bibliography.
+- Interactive maps can be displayed by selecting different algorithms/parameters.
+- RGB maps can be changed (illumination, contrast, gamma) to improve them.
+- Plot spectral signature, selecting dates, sites, atmospheric correction processor, etc.
+- Date selection for map inspection.
+- Color palette settings for a personal touch.
+- Export custom maps, filtered data and plots.
+- Create reports of selected variables, sites and dates as a pdf file.
+- Display main parameters values, for an easy visualization, as a dashboard.
+- Include resources as documentation, links and formatted bibliography.
+
+# Why <quarto-portada>shiny</quarto-portada>? {.center}
+
+- <quarto-portada>shiny</quarto-portada> is a tool for app development, with `r` and `python` integration.
+- Since a lot of work is done by [coding]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} processing, <quarto-portada>shiny</quarto-portada> offers a known framework.
+- With [minimal]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}, configuration a proper app is achieved.
+- Multiple [publishing]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} alternatives are available, some of them for free.
+- <quarto-portada>shiny</quarto-portada> allows to style the app as we like, since we can include web development tools.
+- [Resources]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} available online and package documentation with books and plenty of examples.
+
+## Paraná Project
+  
+::: {.r-fit-text}
+
+```{.r}
+https://vhgauto-seminario4-gulich.share.connect.posit.cloud
+```
+
+![](img/qr_seminario.svg){width="50%" fig-align="center"}
+
+:::
+
+## Deployment options
+
+- [Connect Cloud](https://connect.posit.cloud/), from [Posit](https://posit.co/), offers plans for individuals and organizations, free and paid.
+
+- App embedded in a [Quarto](https://quarto.org/) web site deployed as a static page in [GitHub Pages](https://docs.github.com/es/pages) developed using `shinylive` for [{{< iconify fa7-brands:r-project >}}](https://posit-dev.github.io/r-shinylive/) and [{{< iconify akar-icons:python-fill >}}](https://shiny.posit.co/py/get-started/shinylive.html).
+
+- [Amazon Web Services {{< iconify mdi:aws >}}](https://aws.amazon.com/es/blogs/architecture/scaling-rstudio-shiny-using-serverless-architecture-and-aws-fargate/) offers a scalable, secure, and serverless architecture.
+
+- App transformed as a [package](https://mjfrigaard.github.io/shiny-app-pkgs/), a collections of pre-built, self-contained code, data and documentation.
+
+- Production-grade <quarto-portada>shiny</quarto-portada> applications, from creation to deployment using [`golem`](https://thinkr-open.github.io/golem/).
 
 # Conclusion {#sec-conclusion .center}
 
-> - Coding can be [scary]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} [challenging]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} sometimes, but the results are remarkable.
-> - The different maps formats that can be created (static, animated, interactive, 3D) [worth a try]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3}.
-> - [Reproducibility]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} is important in data analysis but is equaly important in maps plotting.
-> - This seminar it's a glimpse of mapping with code using <rosa>R</rosa>, and a [starting point]{.rn-fragment rn-type=box rn-color=#F79CD4 rn-strokeWidth=3} to start using the scripts available.
+- Coding can be [scary]{.rn-fragment rn-type=crossed-off rn-color=#F79CD4 rn-strokeWidth=3} [challenging]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} sometimes, but the results are remarkable.
+- The different maps formats that can be created (static, animated, interactive, 3D) [worth a try]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3}.
+- [Reproducibility]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} is important in data analysis but is equaly important in maps plotting.
+- This seminar it's a glimpse of mapping with code using <rosa>R</rosa>, and a [starting point]{.rn-fragment rn-type=underline rn-color=#F79CD4 rn-strokeWidth=3} to start using the scripts available.
 
 # Resources {#sec-resources .smaller}
 
@@ -207,13 +249,15 @@ Since a web app is still a web site, we can include links, videos, plots and oth
 
 ::: {.column}
 
-[{{< iconify ion:book-sharp >}} ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/maps.html)
+[{{< iconify ion:book-sharp >}} Mastering Shiny](https://mastering-shiny.org/)
 
-[{{< iconify ion:book-sharp >}} Making Maps with R](https://bookdown.org/nicohahn/making_maps_with_r5/docs/introduction.html)
+[{{< iconify ion:book-sharp >}} Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/index.html)
 
-[{{< iconify ion:book-sharp >}} R as GIS for Economists](https://tmieno2.github.io/R-as-GIS-for-Economists-Quarto/chapters/08-CreateMaps-ggplot.html)
+[{{< iconify ion:book-sharp >}} Outstanding User Interfaces with Shiny](https://unleash-shiny.rinterface.com/)
 
-[{{< iconify ion:book-sharp >}} ggiraph-book](https://www.ardata.fr/ggiraph-book/)
+[{{< iconify ion:book-sharp >}} The Shiny AWS Book](https://business-science.github.io/shiny-production-with-aws-book/)
+
+[{{< iconify ion:book-sharp >}} Shiny App-Packages](https://mjfrigaard.github.io/shiny-app-pkgs/)
 
 ---
 
@@ -228,7 +272,7 @@ Since a web app is still a web site, we can include links, videos, plots and oth
 ::: {.callout style='font-size: 2em;'}
 Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="color:#74aadb;" >}}
 
-[Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario3-gulich)
+[Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario4-gulich-slides)
 :::
 
 :::
