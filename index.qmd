@@ -213,21 +213,21 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 
 ## <quarto-portada>shiny</quarto-portada> extensions
 
-::::: {.columns layout="[6,6]"}
+:::: {.columns}
 
-:::: {.column}
+::: {.column}
 - Theming
 
-[bslib](https://rstudio.github.io/bslib/) provides a modern UI toolkit.
+[bslib](https://rstudio.github.io/bslib/) provides a modern user interface toolkit based on [Bootstrap](https://getbootstrap.com/).
 
-[fresh](https://dreamrs.github.io/fresh/) create a theme to personalize.
+[fresh](https://dreamrs.github.io/fresh/) allows to create custom themes.
 
 [linne](https://linne.john-coene.com/) makes basic CSS easier.
 
 [gfonts](https://github.com/dreamRs/gfonts) offline Google Fonts.
-::::
+:::
 
-:::: {.column}
+::: {.column}
 - User interface
 
 [bsicons](https://github.com/rstudio/bsicons) bootstrap icons.
@@ -235,19 +235,25 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [viewR](https://itsmdivakaran.github.io/viewR/) advanced interactive data table.
 
 [shinychat](https://posit-dev.github.io/shinychat/) LLM-powered chat interfaces.
+:::
+
 ::::
 
-:::: {.column}
+## <quarto-portada>shiny</quarto-portada> extensions
+
+:::: {.columns}
+
+::: {.column}
 - Visualization
 
-[vchartr](https://dreamrs.github.io/vchartr/index.html) for interactive charts.
+[vchartr](https://dreamrs.github.io/vchartr/index.html) for interactive plots.
 
 [tsibbletalk](https://github.com/earowang/tsibbletalk) for exploring temporal patterns.
 
 [g6R](https://cynkra.github.io/g6R/) allows to create interactive network.
-::::
+:::
 
-:::: {.column}
+::: {.column}
 - Developer tools
 
 [shinyuieditor](https://rstudio.github.io/shinyuieditor/) build application UIs by dragging-and-dropping.
@@ -255,9 +261,9 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [tidymodules](https://opensource.nibr.com/tidymodules/) an object-oriented approach to modules.
 
 [shinytest2](https://rstudio.github.io/shinytest2/) testing Shiny applications.
-::::
+:::
 
-:::::
+::::
 
 ## <quarto-portada>shiny</quarto-portada> alternatives
 
@@ -267,13 +273,13 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 :::: {.columns layout="[4, 4, 4]" layout-valign="bottom"}
 
 ::: {.column}
-![](img/plumber.svg){width="100"}
+![](img/plumber.svg){width="90"}
 
 [plumber](https://www.rplumber.io/index.html)
 :::
 
 ::: {.column}
-![](img/flexdashboard.png){width="100"}
+![](img/flexdashboard.png){width="90"}
 
 [flexdashboard](https://rstudio.github.io/flexdashboard/)
 :::
@@ -291,19 +297,19 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 :::: {.columns layout="[4, 4, 4]" layout-valign="bottom"}
 
 ::: {.column}
-{{< iconify devicon:streamlit width=100px >}}
+{{< iconify devicon:streamlit width=90px >}}
 
 [streamlit](https://streamlit.io/)
 :::
 
 ::: {.column}
-{{< iconify devicon:plotly width=100px >}}
+{{< iconify devicon:plotly width=90px >}}
 
 [dash](https://plotly.com/dash/)
 :::
 
 ::: {.column}
-![](img/marimo.svg){width="100"}
+![](img/marimo.svg){width="90"}
 
 [marimo](https://marimo.io/)
 :::
@@ -394,19 +400,7 @@ Since the app is made of an user interface and a server:
 
 ---
 
-[{{< iconify mdi:youtube >}} Mapping wildfires data in R with mapsf](https://www.youtube.com/watch?v=_BN7xOtbVAc)
-
-[{{< iconify mdi:youtube >}} Making maps in R using TMAP](https://www.youtube.com/watch?v=QcR9s3wF5lY)
-
-[{{< iconify mdi:youtube >}} How to FULLY Customize Leaflet Maps using R programming](https://www.youtube.com/watch?v=U0aJeaCnMeE)
-
-[{{< iconify mdi:youtube >}} 3D digital elevation maps with elevatr, rayshader and rayvista in R](https://www.youtube.com/watch?v=kGadI6_ZIR4)
-
-::: {.callout style='font-size: 2em;'}
-Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="color:#74aadb;" >}}
-
-[Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario4-gulich-slides)
-:::
+[{{< iconify mdi:youtube >}} R Shiny for Data Science Tutorial – Build Interactive Data-Driven Web Apps](https://www.youtube.com/watch?v=9uFQECk30kA)
 
 :::
 
@@ -430,10 +424,16 @@ Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="
 
 [{{< iconify fluent-emoji-high-contrast:link >}} Shiny Developer Series](https://shinydevseries.com/)
 
-[{{< iconify fluent-emoji-high-contrast:link >}} State of the (open source) web map](https://tim-salabim.codeberg.page/sotwm/sotwm.html)
+:::
 
-[{{< iconify fluent-emoji-high-contrast:link >}} Tutorial: Adding Open Street Map Data to Rayshader Maps in R](https://www.tylermw.com/posts/data_visualization/adding-open-street-map-data-to-rayshader-maps-in-r.html)
+::::
 
+:::: {.columns layout="[-1, 2, -1]"}
+
+::: {.callout style='font-size: 2em;'}
+Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="color:#74aadb;" >}}
+
+[Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario4-gulich-slides)
 :::
 
 ::::
