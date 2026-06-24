@@ -223,6 +223,8 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [fresh](https://dreamrs.github.io/fresh/) create a theme to personalize.
 
 [linne](https://linne.john-coene.com/) makes basic CSS easier.
+
+[gfonts](https://github.com/dreamRs/gfonts) offline Google Fonts.
 ::::
 
 :::: {.column}
@@ -388,6 +390,8 @@ Since the app is made of an user interface and a server:
 
 [{{< iconify ion:book-sharp >}} Shiny App-Packages](https://mjfrigaard.github.io/shiny-app-pkgs/)
 
+[{{< iconify ion:book-sharp >}} JavaScript for R](https://book.javascript-for-r.com/)
+
 ---
 
 [{{< iconify mdi:youtube >}} Mapping wildfires data in R with mapsf](https://www.youtube.com/watch?v=_BN7xOtbVAc)
@@ -422,10 +426,9 @@ Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="
 
 ---
 
-[{{< iconify fluent-emoji-high-contrast:link >}} Awesome Shiny Extensions
-](https://github.com/nanxstats/awesome-shiny-extensions)
+[{{< iconify fluent-emoji-high-contrast:link >}} Awesome Shiny Extensions](https://github.com/nanxstats/awesome-shiny-extensions)
 
-[{{< iconify fluent-emoji-high-contrast:link >}} Mapbox GL JS](https://www.mapbox.com/)
+[{{< iconify fluent-emoji-high-contrast:link >}} Shiny Developer Series](https://shinydevseries.com/)
 
 [{{< iconify fluent-emoji-high-contrast:link >}} State of the (open source) web map](https://tim-salabim.codeberg.page/sotwm/sotwm.html)
 
