@@ -453,6 +453,8 @@ Since the app is made of an user interface and a server:
 
 [{{< iconify mdi:youtube >}} How to Make an Interactive Dashboard Using R Shiny](https://www.youtube.com/watch?v=VTI84Pqk3SI)
 
+[{{< iconify mdi:youtube >}} We CAN have nice Shiny apps: What's new in Shiny's UI & UX](https://www.youtube.com/watch?v=FPc5PJRWHsk)
+
 :::
 
 ::::
