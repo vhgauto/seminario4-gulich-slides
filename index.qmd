@@ -1,6 +1,6 @@
 ---
 title: Better science communication with<br><quarto-portada>shiny</quarto-portada> apps
-subtitle: <em>With <rosa>remote sensing</rosa> examples</em> | <gris>2026-04-01</gris>
+subtitle: <em>With a <rosa>remote sensing</rosa> example</em> | <gris>2026-04-01</gris>
 title-slide-attributes:
   data-background-color: "#224289"
 author:
@@ -120,7 +120,9 @@ https://vhgauto.github.io/seminario4-gulich-slides/
 - A good app can trigger [curiosity]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} and allows our audience to ask new questions.
 
 <center>
-{{< iconify fluent:apps-48-filled size=8x style="color:#F79CD4;" >}}
+{{< iconify uim:apps size=5x style="color:#F79CD4;" >}} $\qquad$ 
+{{< iconify carbon:application size=5x style="color:#F79CD4;" >}} $\qquad$ 
+{{< iconify streamline-sharp:application-add-remix size=5x style="color:#F79CD4;" >}} $\qquad$ {{< iconify boxicons:component-filled size=5x style="color:#F79CD4;" >}}
 </center>
 
 # Motivation {#sec-motivation .center}
@@ -204,7 +206,7 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 
 # Why use <quarto-portada>shiny</quarto-portada>? {#sec-why .center}
 
-- <quarto-portada2>shiny</quarto-portada2> is a [tool]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} for app development, with {{< iconify fa7-brands:r-project >}} and {{< iconify akar-icons:python-fill >}} integration.
+- <quarto-portada2>shiny</quarto-portada2> is a tool for app development, with [{{< iconify fa7-brands:r-project >}}/{{< iconify akar-icons:python-fill >}}]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} integration.
 - Since a lot of work is done by coding processing, <quarto-portada2>shiny</quarto-portada2> offers a [known framework]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3}.
 - With [minimal]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3}, configuration a proper app is achieved.
 - Multiple [publishing]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} alternatives are available, some of them for free.
@@ -225,6 +227,14 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [linne](https://linne.john-coene.com/) makes basic CSS easier.
 
 [gfonts](https://github.com/dreamRs/gfonts) offline Google Fonts.
+
+[shidashi](https://dipterix.org/shidashi/) framework for <portada-quarto2>shiny</portada-quarto2> templates, especially for dashboard applications.
+
+[shinyMobile](https://shinymobile.rinterface.com/) outstanding apps for iOS and Android.
+
+<center>
+{{< iconify ix:theme style="color:#F79CD4;" width=100px >}}
+</center>
 :::
 
 ::: {.column}
@@ -235,6 +245,14 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [viewR](https://itsmdivakaran.github.io/viewR/) advanced interactive data table.
 
 [shinychat](https://posit-dev.github.io/shinychat/) LLM-powered chat interfaces.
+
+[hover](https://r4fun.github.io/hover/) add animations to <quarto-portada2>shiny</quarto-portada2> button elements.
+
+[countdown](https://pkg.garrickadenbuie.com/countdown/) adds a simple countdown timer.
+
+<center>
+{{< iconify oui:nav-ui style="color:#F79CD4;" width=100px >}}
+</center>
 :::
 
 ::::
@@ -251,6 +269,14 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [tsibbletalk](https://github.com/earowang/tsibbletalk) for exploring temporal patterns.
 
 [g6R](https://cynkra.github.io/g6R/) allows to create interactive network.
+
+[GWalkR](https://github.com/Kanaries/GWalkR) interactive Tableau-like exploratory data analysis.
+
+[flourishcharts](https://github.com/canva-public/flourishcharts) interactive visualization grounded in data storytelling principles.
+
+<center>
+{{< iconify carbon:quadrant-plot style="color:#F79CD4;" width=100px >}}
+</center>
 :::
 
 ::: {.column}
@@ -261,6 +287,14 @@ https://vhgauto-seminario4-gulich.share.connect.posit.cloud
 [tidymodules](https://opensource.nibr.com/tidymodules/) an object-oriented approach to modules.
 
 [shinytest2](https://rstudio.github.io/shinytest2/) testing Shiny applications.
+
+[reactlog](https://rstudio.github.io/reactlog/) visual debugger for <quarto-portada2>shiny</quarto-portada2> apps.
+
+[shinylogs](https://dreamrs.github.io/shinylogs/) record inputs or outputs changes.
+
+<center>
+{{< iconify material-symbols:developer-board-outline-sharp style="color:#F79CD4;" width=100px >}}
+</center>
 :::
 
 ::::
@@ -374,11 +408,12 @@ Since the app is made of an user interface and a server:
 
 # Conclusion {#sec-conclusion .center}
 
-- An alternative for science communication is a reactive app.
-- The audience can interact and request operations from the app, helping them to understands our results.
-- The engagement from an app allows an active participation from the audience.
-- Several scenarios can be potentially improve by apps, such as data exploration, in particular, remote sensing applications.
-- High importance in reproducibility and performance.
+- [<quarto-portada2>shiny</quarto-portada2> apps]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} are an alternative tool for science communication.
+- The audience can interact and request operations from the app, helping them to understands [insight]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} from our results.
+- The engagement from an app allows an [active]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} participation from the audience.
+- Several scenarios can be [improved]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} by apps, such as data exploration, and in particular, remote sensing applications.
+- A [good]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} app requires a conducted guide for our users, short loading times and reproducibility.
+- <quarto-portada2>shiny</quarto-portada2> can help us create data focused apps, so we can share our results in a compelling [curiosity]{.rn-fragment rn-type=circle rn-color=#F79CD4CC rn-strokeWidth=3} inducing way.
 
 # Resources {#sec-resources .smaller}
 
@@ -400,29 +435,23 @@ Since the app is made of an user interface and a server:
 
 ---
 
-[{{< iconify mdi:youtube >}} R Shiny for Data Science Tutorial – Build Interactive Data-Driven Web Apps](https://www.youtube.com/watch?v=9uFQECk30kA)
+[{{< iconify fluent-emoji-high-contrast:link >}} Awesome Shiny Extensions](https://github.com/nanxstats/awesome-shiny-extensions)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Shiny Developer Series](https://shinydevseries.com/)
 
 :::
 
 ::: {.column}
 
-[{{< iconify ph:package-fill >}} mapgl, R interface to Mapbox GL JS v3 and Maplibre GL JS](https://walker-data.com/mapgl/)
+[{{< iconify mdi:youtube >}} R Shiny for Data Science Tutorial – Build Interactive Data-Driven Web Apps](https://www.youtube.com/watch?v=9uFQECk30kA)
 
-[{{< iconify ph:package-fill >}} elevatr, An R package for accessing elevation data](https://github.com/USEPA/elevatr)
+[{{< iconify mdi:youtube >}} How to deploy Shiny apps in 2026](https://www.youtube.com/watch?v=O4AFJT4A858)
 
-[{{< iconify ph:package-fill >}} marmap, Import, Plot and Analyze Bathymetric and Topographic Data](https://github.com/ericpante/marmap)
+[{{< iconify mdi:youtube >}} Golem is a Must-Know Framework For R-Shiny (and here's how to use it)](https://www.youtube.com/watch?v=FEWJsoDewgk)
 
-[{{< iconify ph:package-fill >}} maptiles, Download, compose and display map tiles with R](https://github.com/riatelab/maptiles)
+[{{< iconify mdi:youtube >}} {bslib} Makes R-Shiny Look Professional. Here's How to Use It](https://www.youtube.com/watch?v=Qy_CG7BeUs8)
 
-[{{< iconify ph:package-fill >}} geodata, download geographic data](https://rspatial.github.io/geodata/)
-
-[{{< iconify ph:package-fill >}} rayvista, An R plugin for {rayshader} to view a 3D vista anywhere on earth](https://github.com/h-a-graham/rayvista)
-
----
-
-[{{< iconify fluent-emoji-high-contrast:link >}} Awesome Shiny Extensions](https://github.com/nanxstats/awesome-shiny-extensions)
-
-[{{< iconify fluent-emoji-high-contrast:link >}} Shiny Developer Series](https://shinydevseries.com/)
+[{{< iconify mdi:youtube >}} How to Make an Interactive Dashboard Using R Shiny](https://www.youtube.com/watch?v=VTI84Pqk3SI)
 
 :::
 
@@ -438,7 +467,7 @@ Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="
 
 ::::
 
-# {.unnumbered background-color="#f79cd4"}
+# {.unnumbered background-color="#f79cd4" footer="false"}
 
 ::: {style="text-align: center;"}
 
