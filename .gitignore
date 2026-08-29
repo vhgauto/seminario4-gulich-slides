@@ -21,6 +21,7 @@ vectores/
 recortes/
 img/
 scripts/*
+!scripts/p.R
 extras/*
 
 # History files
