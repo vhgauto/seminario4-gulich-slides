@@ -55,7 +55,7 @@ format:
     slide-number: true
     progress: true
     hash-type: title
-    # date: 2026-04-01
+    date: 2026-09-02
     center-title-slide: false
     navigation-mode: linear
     link-external-icon: false
@@ -97,7 +97,7 @@ filters:
 
 ::: {.column  width="55%"}
 
-<center>Slides available online</center>
+<center>Slides available online [{{< iconify fa:external-link-square >}}](https://vhgauto.github.io/seminario4-gulich-slides/)</center>
 
 ::: {.r-fit-text}
 
@@ -192,7 +192,7 @@ We can include links, videos, figures and other [resources]{.rn-fragment rn-type
 - Display main parameters values, for an easy visualization, as a [dashboard]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3}.
 - Include [resources]{.rn-fragment rn-type=underline rn-color=#F79CD4CC rn-strokeWidth=3} as documentation, links and formatted bibliography.
 
-## Paraná Project {.unnumbered}
+## Paraná Project [{{< iconify fa:external-link-square >}}](https://vhgauto-seminario4-gulich.share.connect.posit.cloud) {.unnumbered}
 
 ::: {.r-fit-text}
 
@@ -438,6 +438,12 @@ Since the app is made of an user interface and a server:
 [{{< iconify fluent-emoji-high-contrast:link >}} Awesome Shiny Extensions](https://github.com/nanxstats/awesome-shiny-extensions)
 
 [{{< iconify fluent-emoji-high-contrast:link >}} Shiny Developer Series](https://shinydevseries.com/)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Shiny Gallery R](https://shiny.posit.co/r/gallery/)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Shiny Gallery Python](https://shiny.posit.co/py/gallery/)
+
+[{{< iconify fluent-emoji-high-contrast:link >}} Shiny for R :: Cheatsheet](https://rstudio.github.io/cheatsheets/html/shiny.html)
 
 :::
 
