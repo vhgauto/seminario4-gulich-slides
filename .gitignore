@@ -23,6 +23,7 @@ img/
 scripts/*
 !scripts/p.R
 extras/*
+!extras/mi_estilo.scss
 
 # History files
 .Rhistory

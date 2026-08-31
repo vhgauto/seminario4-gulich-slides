@@ -1,0 +1,348 @@
+/*-- scss:defaults --*/
+
+// Poncho
+@import "https://raw.githubusercontent.com/argob/poncho/refs/heads/master/dist/css/icono-arg.css";
+
+// Nerd Font
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+// JetBrains Mono
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+// Rufina
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap');
+
+// Noto Sans
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// FUENTES ---------------------------------------------------------------------
+
+$font-family-sans-serif: "Noto Sans", serif !default;
+$font-family-monospace: "JetBrains Mono";
+$presentation-font-size-root: 30px;
+
+// COLORES ---------------------------------------------------------------------
+
+$azul: #1A428A;
+$blanco: #FFFFFF;
+$celeste: #6AAAE4;
+$gris: #c0c0c0 ;
+$gris2: #4D4D4D;
+$rosa: #F79CD4;
+$negro: #131E29;
+$rosa-claro: lighthen($rosa, 60);
+$code-bg: #E5E5E5;
+$code-color: $negro;
+
+$body-bg: $azul !default;
+$body-color: $blanco !default;
+$link-color: darken($rosa, 10) !default;
+$link-hover-color: darken($rosa, 25) !default;
+
+$selection-bg: $gris !default;
+
+// HEADER ----------------------------------------------------------------------
+
+$presentation-heading-font: "Rufina", serif !default;
+$presentation-heading-color: $rosa !default;
+
+// CALLOUT ---------------------------------------------------------------------
+
+$callout-border-width: 1rem;
+
+.reveal div.callout.callout-caution.callout-style-default .callout-title {
+    background-color: $azul !important;
+}
+
+.reveal div.callout.callout-note.callout-style-default .callout-title {
+    background-color: $azul !important;
+}
+
+/*-- scss:rules --*/
+
+// ESTILOS PROPIOS -------------------------------------------------------------
+
+tachado {
+    text-decoration: line-through $rosa 3px;
+}
+
+.fin {
+    font-family: "Fleur De Leah";
+    color: $gris2;
+}
+
+.fondo {
+    background-color: $rosa;
+    border-radius: 5px;
+    box-shadow: 2px 2px $blanco;
+    padding: 10px;
+    a {
+      color: $azul;
+        &:hover {
+          color: $blanco;
+        }
+    }
+}
+
+.grande {
+    font-size: 6em;
+}
+
+quarto-portada {
+    color: $rosa;
+    text-shadow: 2px 2px $blanco;
+    font-size: 1em;
+}
+
+quarto-portada2 {
+    color: $rosa;
+    text-shadow: 1px 1px $blanco;
+    font-size: 1em;
+}
+
+vhg {
+    color: $rosa;
+    font-weight: bold;
+    text-decoration: solid 2px $blanco;
+}
+
+rosa {
+    color: $rosa;
+}
+
+gris {
+      color: $gris;
+}
+
+blanco {
+    color: $blanco;
+}
+
+caa {
+    color: $blanco;
+    font-size: .7em;
+    line-height: 10px;
+}
+
+.subtitle {
+    color: $blanco;
+    margin-top: -5px;
+    margin-bottom: 0em;
+    font-size: 1.2em;
+}
+
+.link {
+    font-size: 6rem;
+}
+
+linea {
+    text-decoration: underline 3px $rosa;
+}
+
+.tree {
+    font-weight: bold;
+}
+
+.arbol {
+    font-weight: bold;
+}
+
+.eqi-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+azul {
+    color: $azul;
+}
+
+.fondo-azul {
+    background-color: $azul;
+    padding: 5px;
+}
+
+.fondo-azul-gracias {
+    background-color: $azul;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px $blanco;
+}
+
+lang-rosa {
+    color: $blanco;
+    &:hover {
+        color: $rosa;
+    }
+}
+
+gracias {
+    font-family: "Rufina";
+    color: $azul;
+    font-weight: bold;
+    font-size: 4em;
+    text-shadow: 2px 2px $blanco;
+}
+
+barra {
+  font-weight: bold;
+  color: $rosa;
+  font-family: "JetBrains Mono";
+  font-size: 2.5em;
+}
+
+.caja1 {
+  height: 125px;
+  width: 125px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  background-color: #B86092;
+}
+
+.caja2 {
+  height: 125px;
+  width: 125px;
+  margin-left: 15px;
+  border: 1px solid white;
+  background-color: #007E2E;
+}
+
+// ESTILOS PERSONALIZADOS ------------------------------------------------------
+
+.title-slide h1 {
+  //text-decoration: underline 2px solid $celeste;
+  //text-underline-offset: 5px;
+}
+
+.header-section-number {
+    font-family: "JetBrains Mono";
+    color: $celeste;
+    font-size: .6em;
+}
+
+li::marker {
+    color: $rosa;
+}
+
+:root {
+    --quarto-hl-fu-color: #{$negro};
+    --header-font-color: #{$rosa};
+}
+
+.reveal .footer > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $blanco;
+    font-family: "JetBrains Mono";
+}
+
+h1.title {
+    margin-bottom: .2em;
+    font-size: 3em;
+}
+
+code {
+    border-radius: 0px;
+}
+
+// PORTADA ---------------------------------------------------------------------
+
+.quarto-title-author-name {
+    font-size: .7em;
+    padding: 10px 3px 10px 3px;
+}
+
+.reveal .quarto-title-block .quarto-title-authors .quarto-title-author a {
+    font-size: .8em;
+    padding-bottom: 10px;
+}
+
+.quarto-title-affiliation {
+    font-size: .7em;
+    padding: 2px 3px 0px 3px;
+}
+
+.quarto-title-author-email {
+    color: $rosa;
+    padding-bottom: 10px;
+}
+
+.reveal .quarto-title-block .quarto-title-authors .quarto-title-author {
+    padding: 1em .25em .25em .25em;
+    text-align: left;
+}
+
+#title-slide .subtitle, div.reveal div.slides section.quarto-title-block .subtitle {
+  margin-bottom: .5rem;
+}
+
+.date {
+    font-family: "JetBrains Mono";
+    color: $gris;
+    font-size: 1rem;
+    margin-top: 0px imporant;
+}
+
+.reveal .slides section .fragment.hl-blanco {
+  opacity: unset;
+  visibility: unset;
+
+  &.visible, &.current-fragment {
+      color: $azul;
+      background-color: $blanco;
+      border-radius: 3px;
+  }
+}
+
+.reveal .slides section .fragment.hl-proud {
+  opacity: unset;
+  visibility: unset;
+
+  &.visible, &.current-fragment {
+      color: $azul;
+      background-color: $blanco;
+      border-radius: 3px;
+      box-shadow: 0px 0px 10px 10px $rosa;
+  }
+}
+
+div.reveal.has-logo div.slide-number {
+    font-family: "JetBrains Mono";
+    color: $gris;
+    font-size: .5em;
+}
+
+.reveal .footer > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $celeste;
+    font-family: "JetBrains Mono";
+}
+
+.reveal div.callout.callout-style-simple, .reveal div.callout.callout-style-default {
+    border-left: 1rem solid $rosa;
+    border-right: solid 1px $rosa;
+    border-top: solid 1px $rosa;
+    border-bottom: solid 1px $rosa;
+}
+
+.quarto-dark .code-with-filename .code-with-filename-file {
+    background-color: $celeste;
+    color: $blanco;
+}
+
+// íconos
+
+.line-md--cog-filled-loop {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-dasharray='34' stroke-linecap='round' stroke-linejoin='round' stroke-width='0' d='M12 7c2.76 0 5 2.24 5 5c0 2.76 -2.24 5 -5 5c-2.76 0 -5 -2.24 -5 -5c0 -2.76 2.24 -5 5 -5Z'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.08s' values='34;0'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='0'/%3E%3C/path%3E%3Cg fill='black'%3E%3Cpath d='M11 13l4.74 -7.5c0.29 0.17 0.57 0.35 0.83 0.55c0 0 2.52 -1.01 2.52 -1.01c0.16 -0.06 0.43 -0.03 0.51 0.13c0 0 2.07 3.58 2.07 3.58c0.1 0.17 0.06 0.45 -0.07 0.57c0 0 -2.17 1.68 -2.17 1.68c0.05 0.33 0.07 0.66 0.07 1Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M11 13l4.74 -7.5c0.29 0.17 0.57 0.35 0.83 0.55c0 0 0 0 0 0c0.07 0.05 0.14 0.11 0.2 0.17c1.37 1.12 2.32 2.72 2.63 4.53c0.01 0.09 0.02 0.17 0.03 0.25c0 0 0 0 0 0c0.05 0.33 0.07 0.66 0.07 1Z;M11 13l4.74 -7.5c0.29 0.17 0.57 0.35 0.83 0.55c0 0 2.52 -1.01 2.52 -1.01c0.16 -0.06 0.43 -0.03 0.51 0.13c0 0 2.07 3.58 2.07 3.58c0.1 0.17 0.06 0.45 -0.07 0.57c0 0 -2.17 1.68 -2.17 1.68c0.05 0.33 0.07 0.66 0.07 1Z'/%3E%3C/path%3E%3Cpath d='M10.63 11.63l8.87 0.35c0 0.34 -0.02 0.67 -0.06 0.99c0 0 2.13 1.68 2.13 1.68c0.13 0.11 0.24 0.36 0.14 0.51c0 0 -2.07 3.58 -2.07 3.58c-0.1 0.17 -0.36 0.28 -0.53 0.22c0 0 -2.54 -1.04 -2.54 -1.04c-0.26 0.21 -0.54 0.39 -0.83 0.56Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M10.63 11.63l8.87 0.35c0 0.34 -0.02 0.67 -0.06 0.99c0 0 0 0 0 0c-0.01 0.09 -0.03 0.18 -0.05 0.26c-0.28 1.75 -1.2 3.37 -2.61 4.54c-0.07 0.05 -0.14 0.1 -0.2 0.15c0 0 0 0 0 0c-0.26 0.21 -0.54 0.39 -0.83 0.56Z;M10.63 11.63l8.87 0.35c0 0.34 -0.02 0.67 -0.06 0.99c0 0 2.13 1.68 2.13 1.68c0.13 0.11 0.24 0.36 0.14 0.51c0 0 -2.07 3.58 -2.07 3.58c-0.1 0.17 -0.36 0.28 -0.53 0.22c0 0 -2.54 -1.04 -2.54 -1.04c-0.26 0.21 -0.54 0.39 -0.83 0.56Z'/%3E%3C/path%3E%3Cpath d='M11.63 10.63l4.13 7.85c-0.29 0.17 -0.59 0.32 -0.89 0.44c0 0 -0.39 2.69 -0.39 2.69c-0.03 0.17 -0.19 0.39 -0.37 0.38c0 0 -4.14 0 -4.14 0c-0.2 0 -0.42 -0.17 -0.46 -0.35c0 0 -0.37 -2.72 -0.37 -2.72c-0.31 -0.12 -0.61 -0.27 -0.9 -0.44Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M11.63 10.63l4.13 7.85c-0.29 0.17 -0.59 0.32 -0.89 0.44c0 0 0 0 0 0c-0.08 0.04 -0.17 0.07 -0.25 0.09c-1.65 0.63 -3.52 0.65 -5.24 0.01c-0.08 -0.04 -0.16 -0.07 -0.23 -0.1c0 0 0 0 0 0c-0.31 -0.12 -0.61 -0.27 -0.9 -0.44Z;M11.63 10.63l4.13 7.85c-0.29 0.17 -0.59 0.32 -0.89 0.44c0 0 -0.39 2.69 -0.39 2.69c-0.03 0.17 -0.19 0.39 -0.37 0.38c0 0 -4.14 0 -4.14 0c-0.2 0 -0.42 -0.17 -0.46 -0.35c0 0 -0.37 -2.72 -0.37 -2.72c-0.31 -0.12 -0.61 -0.27 -0.9 -0.44Z'/%3E%3C/path%3E%3Cpath d='M13 11l-4.74 7.5c-0.29 -0.17 -0.57 -0.35 -0.83 -0.55c0 0 -2.52 1.01 -2.52 1.01c-0.16 0.06 -0.43 0.03 -0.51 -0.13c0 0 -2.07 -3.58 -2.07 -3.58c-0.1 -0.17 -0.06 -0.45 0.07 -0.57c0 0 2.17 -1.68 2.17 -1.68c-0.05 -0.33 -0.07 -0.66 -0.07 -1Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M13 11l-4.74 7.5c-0.29 -0.17 -0.57 -0.35 -0.83 -0.55c0 0 0 0 0 0c-0.07 -0.05 -0.14 -0.11 -0.2 -0.17c-1.37 -1.12 -2.32 -2.72 -2.63 -4.53c-0.01 -0.09 -0.02 -0.17 -0.03 -0.25c0 0 0 0 0 0c-0.05 -0.33 -0.07 -0.66 -0.07 -1Z;M13 11l-4.74 7.5c-0.29 -0.17 -0.57 -0.35 -0.83 -0.55c0 0 -2.52 1.01 -2.52 1.01c-0.16 0.06 -0.43 0.03 -0.51 -0.13c0 0 -2.07 -3.58 -2.07 -3.58c-0.1 -0.17 -0.06 -0.45 0.07 -0.57c0 0 2.17 -1.68 2.17 -1.68c-0.05 -0.33 -0.07 -0.66 -0.07 -1Z'/%3E%3C/path%3E%3Cpath d='M13.37 12.37l-8.87 -0.35c0 -0.34 0.02 -0.67 0.06 -0.99c0 0 -2.13 -1.68 -2.13 -1.68c-0.13 -0.11 -0.24 -0.36 -0.14 -0.51c0 0 2.07 -3.58 2.07 -3.58c0.1 -0.17 0.36 -0.28 0.53 -0.22c0 0 2.54 1.04 2.54 1.04c0.26 -0.21 0.54 -0.39 0.83 -0.56Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M13.37 12.37l-8.87 -0.35c0 -0.34 0.02 -0.67 0.06 -0.99c0 0 0 0 0 0c0.01 -0.09 0.03 -0.18 0.05 -0.26c0.28 -1.75 1.2 -3.37 2.61 -4.54c0.07 -0.05 0.14 -0.1 0.2 -0.15c0 0 0 0 0 0c0.26 -0.21 0.54 -0.39 0.83 -0.56Z;M13.37 12.37l-8.87 -0.35c0 -0.34 0.02 -0.67 0.06 -0.99c0 0 -2.13 -1.68 -2.13 -1.68c-0.13 -0.11 -0.24 -0.36 -0.14 -0.51c0 0 2.07 -3.58 2.07 -3.58c0.1 -0.17 0.36 -0.28 0.53 -0.22c0 0 2.54 1.04 2.54 1.04c0.26 -0.21 0.54 -0.39 0.83 -0.56Z'/%3E%3C/path%3E%3Cpath d='M12.37 13.37l-4.13 -7.85c0.29 -0.17 0.59 -0.32 0.89 -0.44c0 0 0.39 -2.69 0.39 -2.69c0.03 -0.17 0.19 -0.39 0.37 -0.38c0 0 4.14 0 4.14 0c0.2 0 0.42 0.17 0.46 0.35c0 0 0.37 2.72 0.37 2.72c0.31 0.12 0.61 0.27 0.9 0.44Z' opacity='0'%3E%3CanimateTransform attributeName='transform' dur='6s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3Cset fill='freeze' attributeName='opacity' begin='0.08s' to='1'/%3E%3Canimate fill='freeze' attributeName='d' begin='0.08s' dur='0.04s' values='M12.37 13.37l-4.13 -7.85c0.29 -0.17 0.59 -0.32 0.89 -0.44c0 0 0 0 0 0c0.08 -0.04 0.17 -0.07 0.25 -0.09c1.65 -0.63 3.52 -0.65 5.24 -0.01c0.08 0.04 0.16 0.07 0.23 0.1c0 0 0 0 0 0c0.31 0.12 0.61 0.27 0.9 0.44Z;M12.37 13.37l-4.13 -7.85c0.29 -0.17 0.59 -0.32 0.89 -0.44c0 0 0.39 -2.69 0.39 -2.69c0.03 -0.17 0.19 -0.39 0.37 -0.38c0 0 4.14 0 4.14 0c0.2 0 0.42 0.17 0.46 0.35c0 0 0.37 2.72 0.37 2.72c0.31 0.12 0.61 0.27 0.9 0.44Z'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
