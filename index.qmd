@@ -1,6 +1,6 @@
 ---
 title: Better science communication with<br><quarto-portada>shiny</quarto-portada> apps
-subtitle: <em>With a <rosa>remote sensing</rosa> example</em> | <gris>2026-04-01</gris>
+subtitle: <em>With a <rosa>remote sensing</rosa> example</em>
 title-slide-attributes:
   data-background-color: "#224289"
 author:
