@@ -402,8 +402,6 @@ Since the app is made of an user interface and a server:
 
 - App transformed as a [package](https://mjfrigaard.github.io/shiny-app-pkgs/), a collections of pre-built, self-contained code, data and documentation.
 
-- [golem](https://thinkr-open.github.io/golem/) for production-grade <quarto-portada2>shiny</quarto-portada2> applications.
-
 # Conclusion {#sec-conclusion .center}
 
 - [<quarto-portada2>shiny</quarto-portada2> apps]{.rn-fragment rn-type=underline rn-color=#F79CD4FF rn-strokeWidth=3} are an alternative tool for science communication.
@@ -447,7 +445,9 @@ Since the app is made of an user interface and a server:
 
 ::: {.column}
 
-[{{< iconify fluent-emoji-high-contrast:link >}} R packages for building robust, production grade `{shiny}` apps](https://golemverse.org/)
+[{{< iconify ph:package-fill >}} golem for production-grade shiny applications](https://thinkr-open.github.io/golem/)
+
+[{{< iconify ph:package-fill >}} R packages for building robust, production grade shiny apps](https://golemverse.org/)
 
 ---
 
