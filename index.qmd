@@ -79,8 +79,6 @@ filters:
 
 # Outline {.center .unnumbered}
 
-<!-- {.rn-fragment rn-type=underline rn-color=#F79CD4FF rn-strokeWidth=3} -->
-
 :::: {.columns}
 
 ::: {.column  width="45%"}
@@ -396,7 +394,7 @@ Since the app is made of an user interface and a server:
 
 ## Deployment options
 
-- [Connect Cloud](https://connect.posit.cloud/), from [Posit](https://posit.co/), offers plans for individuals and organizations, [free]{.rn-fragment rn-type=underline rn-color=#F79CD4FF rn-strokeWidth=3} and paid. Integrated with [Positron {{< iconify devicon-plain:positron >}}](https://positron.posit.co/) IDE.
+- [Posit Connect Cloud {{< iconify simple-icons:posit >}}](https://connect.posit.cloud/) offers plans for individuals and organizations, [free]{.rn-fragment rn-type=underline rn-color=#F79CD4FF rn-strokeWidth=3} and paid. Integrated with [Positron {{< iconify devicon-plain:positron >}}](https://positron.posit.co/) IDE.
 
 - App embedded in a [Quarto](https://quarto.org/) web site deployed as a [static page]{.rn-fragment rn-type=underline rn-color=#F79CD4FF rn-strokeWidth=3} in [GitHub Pages](https://docs.github.com/es/pages) developed using [shinylive](https://opensource.posit.co/blog/2022-10-25_shinylive-extension/) for [{{< iconify fa7-brands:r-project >}}](https://posit-dev.github.io/r-shinylive/) and [{{< iconify akar-icons:python-fill >}}](https://shiny.posit.co/py/get-started/shinylive.html).
 
@@ -449,6 +447,10 @@ Since the app is made of an user interface and a server:
 
 ::: {.column}
 
+[{{< iconify fluent-emoji-high-contrast:link >}} R packages for building robust, production grade `{shiny}` apps](https://golemverse.org/)
+
+---
+
 [{{< iconify mdi:youtube >}} R Shiny for Data Science Tutorial – Build Interactive Data-Driven Web Apps](https://www.youtube.com/watch?v=9uFQECk30kA)
 
 [{{< iconify mdi:youtube >}} How to deploy Shiny apps in 2026](https://www.youtube.com/watch?v=O4AFJT4A858)
@@ -465,10 +467,10 @@ Since the app is made of an user interface and a server:
 
 ::::
 
-:::: {.columns layout="[-1, 2, -1]"}
+:::: {.columns layout="[-2, 2, -2]"}
 
-::: {.callout style='font-size: 2em;'}
-Presentation made with {{< quarto >}} & {{< iconify fa7-brands:r-project style="color:#74aadb;" >}}
+::: {.callout style='font-size: 1.5em;'}
+Presentation made with [{{< quarto >}}](https://quarto.org/)
 
 [Code available at {{< iconify mdi:github >}}](https://github.com/vhgauto/seminario4-gulich-slides)
 :::
